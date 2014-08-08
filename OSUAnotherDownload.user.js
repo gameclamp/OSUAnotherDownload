@@ -7,10 +7,9 @@
 // @include        *://osu.ppy.sh/s/*
 // @include        *://osu.ppy.sh/b/*
 // @include        *://osu.ppy.sh/p/beatmap?*
-// @updateURL      
-// @downloadURL    
+// @updateURL      https://github.com/gameclamp/OSUAnotherDownload/raw/master/OSUAnotherDownload.user.js
 // @grant          GM_xmlhttpRequest
-// @version        0.9.4
+// @version        0.9.5
 // ==/UserScript==
 var sous = document.getElementsByTagName('h1') [0];
 var acc = document.getElementsByClassName('login-open-button') [0];
