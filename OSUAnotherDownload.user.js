@@ -9,7 +9,7 @@
 // @include        *://osu.ppy.sh/p/beatmap?*
 // @updateURL      https://github.com/gameclamp/OSUAnotherDownload/raw/master/OSUAnotherDownload.user.js
 // @grant          GM_xmlhttpRequest
-// @version        0.9.5
+// @version        0.9.6
 // ==/UserScript==
 var sous = document.getElementsByTagName('h1') [0];
 var acc = document.getElementsByClassName('login-open-button') [0];
@@ -88,7 +88,7 @@ function main() {
             if (myobj.uugl == 0 || myobj.uugl == null) {
                 uugllink = '»Osu.uu.gl';
             } else {
-                uugllink = '<a id="uugllink" href="http://osu.uu.gl/pid/' + myobj.uugl + '" class="link uugl">»Osu.uu.gl</a>';
+                uugllink = '<a id="uugllink" href="http://osu.uu.gl/s/' + myobj.uugl + '" class="link uugl">»Osu.uu.gl</a>';
             }
             //1000eb
 
