@@ -9,7 +9,7 @@
 // @include        *://osu.ppy.sh/p/beatmap?*
 // @updateURL      https://github.com/gameclamp/OSUAnotherDownload/raw/master/OSUAnotherDownload.user.js
 // @grant          GM_xmlhttpRequest
-// @version        0.9.6
+// @version        0.9.7
 // ==/UserScript==
 var sous = document.getElementsByTagName('h1') [0];
 var acc = document.getElementsByClassName('login-open-button') [0];
@@ -24,7 +24,7 @@ var myobj = new Array;
 var uptime = '1';
 var nupdate = '';
 var uploader = '';
-var songid = /return play\((\d+)/.exec(document.body.innerHTML) [1];
+var songid = /\d+/.exec(document.querySelector('#songinfo img:first-child').src)[0];
 if (!isranked) {
     uptime = document.getElementsByClassName('colour') [15].innerHTML;
     uptime = uptime.match(/(.*)/g) [3].replace(/[\s]/g, '');
@@ -55,7 +55,7 @@ function noacc(a, b) {
 function main() {
     GM_xmlhttpRequest({
         method: 'GET',
-        url: 'http://www.gameclamp.tk/osuAD.php?id=' + songid,
+        url: 'http://fb1424.bget.ru/osuAD.php?id=' + songid,
         headers: {
             'Referer': location.href,
         },
